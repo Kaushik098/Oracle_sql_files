@@ -1,0 +1,37 @@
+SCHEMA/USER
+- is a collection of objects
+
+DATABASE
+--SCHEMA/USER
+ EXAMPLE:
+--a developer logins business schema (e.g., HR) for development activities
+CONNECT hr/hr
+ HR schema
+
+    TABLES - CREATE/ALTER/DROP/INSERT/UPDATE/DELETE/SELECT
+   --employees
+   --courses
+   --students
+   --departments
+-------------------------------------------------------------------------------   
+--A DBA connects to SYS schema for admin related activities like below
+CONNECT sys/sys AS SYSDBA
+ALTER USER HR ACCOUNT UNLOCK IDENTIFIED BY hr;
+DISCONNECT
+
+
+Eg: Try to create following tasks to complete a project within March:
+
+Schema has
+SQL objects
+   TABLES
+   VIEWS
+   INDEX
+   SYNONYMS
+   SEQUENCES
+PLSQL objects
+   PROCEDURES
+   FUNCTIONS
+   PACKAGES
+   TRIGGERS
+

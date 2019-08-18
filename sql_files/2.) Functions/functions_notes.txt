@@ -1,0 +1,33 @@
+FUNCTIONS - Piece of code which is preconfigured and can be used/called when ever required
+
+Types:
+1) Oracle defined functions
+2) User defined functions
+
+
+1) Oracle defined functions
+   - Single row functions e.g., UPPER, TO_CHAR, ROUND, MOD, NVL
+   - Group row/group/aggregate functions e.g., SUM MIN MAX AVG COUNT
+    - Analytical functions e.g., RANK(), DENSE_RANK(), RATIO_TO_REPORT(), LAG(), LEAD()
+
+SELECT UPPER('bala'), ROUND(123.567), MOD(10,2),NVL(NULL,111) FROM dual;
+
+SELECT SUM(salary), COUNT(*) FROM employees;
+
+
+2) User defined functions - plsql functions
+
+e.g., 
+CREATE OR REPLACE FUNCTION f_add_numbers (p_in_1 IN NUMBER, p_in_2 IN NUMBER)
+RETURN NUMBER
+AS
+BEGIN
+
+RETURN p_in_1 + p_in_2;
+
+END;
+/
+
+How to call the function?
+
+SELECT UPPER('bala'), f_add_numbers(10,100) FROM DUAL;
